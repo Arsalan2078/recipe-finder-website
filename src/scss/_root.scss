@@ -1,0 +1,48 @@
+:root {
+    // colors
+    --clr-neutral-900: rgb(22 58 52);
+    --clr-neutral-600: rgb(57 88 82);
+    --clr-neutral-300: rgb(208 220 217);
+    --clr-neutral-200: rgb(224 230 227);
+    --clr-neutral-100: rgb(246 245 241);
+    --clr-neutral-0: rgb(255 255 255);
+
+    --clr-orange: rgb(254 159 107);
+    --clr-teal: rgb(73 172 155);
+    --clr-indigo: rgb(105 125 219);
+
+    // fonts
+    --ff-nunito: "Nunito", sans-serif;
+    --ff-nunito-sans: "Nunito Sans", sans-serif;
+
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    --fs-64-72: clamp(4rem, 3.4286rem + 1.1905vw, 4.5rem);
+    --fs-52-64: clamp(3.25rem, 2.5344rem + 3.0534vw, 4rem);
+    --fs-40-48: clamp(2.5rem, 2.0229rem + 2.0356vw, 3rem);
+    --fs-32: 2rem;
+    --fs-24: 1.5rem;
+    --fs-20: 1.25rem;
+    --fs-18: 1.125rem;
+    --fs-16: 1rem;
+    --fs-14: 0.875rem;
+
+    --lh-110: 1.1;
+    --lh-120: 1.2;
+    --lh-130: 1.3;
+    --lh-140: 1.4;
+    --lh-150: 1.5;
+
+    --ls-neg-200: calc(-2 / 16 * 1rem);
+    --ls-neg-100: calc(-1 / 16 * 1rem);
+    --ls-neg-050: calc(-0.5 / 16 * 1rem);
+    --ls-neg-040: calc(-0.4 / 16 * 1rem);
+    --ls-neg-030: calc(-0.3 / 16 * 1rem);
+
+    // root styles
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-600);
+}

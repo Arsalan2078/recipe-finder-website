@@ -1,1 +1,5 @@
-@import "normalize.css"
+@use "./reset";
+@use "./font-faces";
+@use "./root";
+@use "./base";
+@use "./typography";
