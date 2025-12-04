@@ -1,18 +1,18 @@
+import { DATA_URL } from "./libs/constants";
+import { useFetch } from "./libs/hooks";
+import type { RecipeProps } from "./libs/types";
+
 export default function App() {
-    const sentence = "Beyond the lake lies a deeper, darker ocean green.";
+    const { data: recipes, isLoading } = useFetch<RecipeProps[]>(DATA_URL);
 
     return (
-        <div>
-            <div data-textPreset="1">{sentence}</div>
-            <div data-textPreset="2">{sentence}</div>
-            <div data-textPreset="3">{sentence}</div>
-            <div data-textPreset="4">{sentence}</div>
-            <div data-textPreset="5">{sentence}</div>
-            <div data-textPreset="6">{sentence}</div>
-            <div data-textPreset="7">{sentence}</div>
-            <div data-textPreset="8">{sentence}</div>
-            <div data-textPreset="9">{sentence}</div>
-            <div data-textPreset="10">{sentence}</div>
+        <div data-textPreset="6">
+            {recipes &&
+                recipes.map((recipe) => (
+                    <div key={recipe.id}>
+                        <div>{recipe.title}</div>
+                    </div>
+                ))}
         </div>
     );
 }
