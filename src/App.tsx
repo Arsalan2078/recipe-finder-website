@@ -1,18 +1,15 @@
-import { DATA_URL } from "./libs/constants";
-import { useFetch } from "./libs/hooks";
-import type { RecipeProps } from "./libs/types";
+import { NavLink, Outlet } from "react-router";
 
 export default function App() {
-    const { data: recipes, isLoading } = useFetch<RecipeProps[]>(DATA_URL);
-
     return (
         <div data-textPreset="6">
-            {recipes &&
-                recipes.map((recipe) => (
-                    <div key={recipe.id}>
-                        <div>{recipe.title}</div>
-                    </div>
-                ))}
+            <nav>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/recipes" end>Recipes</NavLink>
+            </nav>
+
+           <Outlet />
         </div>
     );
 }
